@@ -1,12 +1,13 @@
 ## Overview of Project
 
 ### Purpose
-The purpose of this project was to allow Steve to quickly perform research on certain stocks and to streamline the time it takes to find the information. In order to get this completed the supplied file with the Microsoft Excel VBA code had to be refactored.
+The purpose of this project was to allow Steve to quickly perform research on certain stocks and to streamline the time it takes to find that information. In order to get this completed the supplied file with the Microsoft Excel VBA code had to be refactored for quicker processing time.
+
 
 ## Results
-I began by copying the code and created a macro for that code then refactored the code into another macro. I then ran both codes to see the results and the refactored code performed quicker. Below is the refactored code. 
+I began by copying the code and created a macro for that code then refactored the code into another macro. I then ran both codes on the 2018 data and verified the results. The refactored code ran quicker than the original code that was supplied. The below code was added to the original script. 
 
-'1a) Create a ticker Index
+    '1a) Create a ticker Index
     
      tickerIndex = 0
 
@@ -17,7 +18,7 @@ I began by copying the code and created a macro for that code then refactored th
     Dim tickerStartingPrices(12) As Single
     Dim tickerEndingPrices(12) As Single
         
-    ''2a) Create a for loop to initialize the tickerVolumes to zero.
+    '2a) Create a for loop to initialize the tickerVolumes to zero.
     
     For i = 0 To 11
         tickerVolumes(i) = 0
@@ -26,7 +27,7 @@ I began by copying the code and created a macro for that code then refactored th
     
     Next i
         
-    ''2b) Loop over all the rows in the spreadsheet.
+    '2b) Loop over all the rows in the spreadsheet.
         
     For i = 2 To RowCount
         
@@ -74,11 +75,13 @@ I began by copying the code and created a macro for that code then refactored th
 
 
 ## Summary
-Refactoring the code allowed Excel to perform the function quicker. As you can see the before factoring and then the refactored run time. 
+Refactoring the code allowed Excel to perform the function quicker. As you can see below the time it took the original code was about 332 milliseconds and the refactored code ran about 58 milliseconds. So, the difference between the two is about 274 milliseconds!
 
-![VBA 2018 Screenshoot](https://github.com/princetonduarte/stock-analysis/blob/8b27541f0a1e371f6ea10bac993148ad76f35141/Resources/VBA_Challenge_2018.png)
+- The advantage of refactoring code is that you may not have to write the whole code from scratch. A refactored code also can perform functions quicker. 
 
-![VBA 2018 Refactored](https://github.com/princetonduarte/stock-analysis/blob/8b27541f0a1e371f6ea10bac993148ad76f35141/Resources/VBA_Challenge_2018_refactored.png)
+### Original Code
 
--The advantages of refactoring code is that you may not to write the whole code from scratch. A refactored code also can perform functions quicker. 
+![Original](https://github.com/princetonduarte/stock-analysis/blob/8b27541f0a1e371f6ea10bac993148ad76f35141/Resources/VBA_Challenge_2018.png)
 
+### Refactored Code
+![Refactored](https://github.com/princetonduarte/stock-analysis/blob/0329b6194ff44dad8b00aebe009b7b78cb60ef4b/Resources/VBA_Challenge_2018_refactored.png)
